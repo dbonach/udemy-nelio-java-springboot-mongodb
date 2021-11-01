@@ -21,8 +21,6 @@ public class UserResource {
 	@GetMapping
 	public ResponseEntity<List<User>> findAll() {
 		List<User> list = service.findAll();
-		System.out.println("ok");
-		list.forEach(System.out::println);
 		return ResponseEntity.ok().body(list);
 	}
 }
